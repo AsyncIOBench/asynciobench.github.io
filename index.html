@@ -18,7 +18,7 @@
             <p>A comprehensive benchmark tool comparing libaio, io_uring, and SPDK engines for storage performance testing</p>
         </div>
     </header>    
-    
+
     <section class="intro">
         <div class="container">
             <h2>Project Overview</h2>
@@ -31,14 +31,14 @@
                 <li><strong>io_uring:</strong> A newer Linux I/O interface that provides faster and more efficient asynchronous I/O by reducing kernel overhead.</li>
                 <li><strong>SPDK (Storage Performance Development Kit):</strong> A user-space engine designed for extremely low-latency and high-throughput I/O, mostly used with NVMe SSDs.</li>
             </ul>
-    
+
             <p>We tested these engines under different conditions, including with 1 and 4 threads for each engine. The tests measured:</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
                 <li><strong>IOPS (Input/Output Operations Per Second):</strong> Measures how quickly read and write operations are performed.</li>
                 <li><strong>Latency (µs):</strong> Measures the time it takes for an I/O request to complete.</li>
                 <li><strong>Bandwidth (MiB/s):</strong> Measures the amount of data transferred in megabytes per second during read/write operations.</li>
             </ul>
-    
+
             <h3>How the Benchmarking Was Done</h3>
             <p>Here are the hardware and test environment details:</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
@@ -49,36 +49,36 @@
                 <li><strong>Test Configuration:</strong> Tests were conducted with 1 and 4 threads for each engine</li>
                 <li><strong>Testing Tool:</strong> fio (Flexible I/O Tester) was used for the benchmarking</li>
             </ul>
-    
+
             <h3>Engine Comparison</h3>
             <p>Here’s a breakdown of the strengths and limitations of each engine:</p>
-    
+
             <h4>libaio</h4>
             <p>libaio is an older Linux I/O library that performs asynchronous operations. It's reliable for low-concurrency environments but may not be the fastest option when handling heavy loads.</p>
             <ul style="list-style-type: circle; margin-left: 40px;">
                 <li><strong>Best for:</strong> Simple setups with low concurrency.</li>
                 <li><strong>Limitations:</strong> Higher latency and lower throughput when compared to newer engines like io_uring and SPDK.</li>
             </ul>
-    
+
             <h4>io_uring</h4>
             <p>io_uring is a more recent I/O interface that reduces kernel overhead and offers better performance, especially in high-concurrency tasks. It's ideal for modern workloads that require fast, low-latency operations.</p>
             <ul style="list-style-type: circle; margin-left: 40px;">
                 <li><strong>Best for:</strong> Applications with high I/O demands like databases or workloads requiring low latency.</li>
                 <li><strong>Limitations:</strong> Requires Linux kernel version 5.1 or later and may not work as well on older hardware.</li>
             </ul>
-    
+
             <h4>SPDK</h4>
             <p>SPDK is a high-performance, user-space I/O framework designed for NVMe storage systems. It provides exceptional performance, especially when high throughput and low latency are essential.</p>
             <ul style="list-style-type: circle; margin-left: 40px;">
                 <li><strong>Best for:</strong> High-performance computing, storage servers, and environments with NVMe SSDs.</li>
                 <li><strong>Limitations:</strong> It requires more complex setup and is resource-intensive compared to libaio and io_uring.</li>
             </ul>
-    
+
             <h3>Conclusion</h3>
             <p>Based on the benchmarking results, SPDK outperformed both libaio and io_uring in terms of throughput and IOPS, especially when using 4 threads. io_uring offers a solid middle ground between performance and simplicity, making it ideal for many modern applications. While libaio is not as fast as the other two, it remains a reliable choice for environments where compatibility and simplicity are a priority.</p>
         </div>
     </section>    
-    
+
     <section class="comparison">
         <div class="container">
             <h2>Benchmark Comparison</h2>
@@ -122,7 +122,7 @@
                         <td>41.16</td>
                         <td>30.2</td>
                     </tr>
-    
+
                     <!-- Data from io_uring -->
                     <tr>
                         <td>io_uring</td>
@@ -152,7 +152,7 @@
                         <td>514.82</td>
                         <td>35.5</td>
                     </tr>
-    
+
                     <!-- Data from SPDK -->
                     <tr>
                         <td>SPDK</td>
@@ -182,7 +182,7 @@
                         <td>1.71</td>
                         <td>5838</td>
                     </tr>
-    
+
                     <!-- Additional Data from libaio, io_uring and SPDK for other tests -->
                     <tr>
                         <td>libaio</td>
@@ -209,7 +209,6 @@
             </table>
         </div>
     </section>
-    
 
     <section class="images">
         <div class="container">
@@ -229,7 +228,7 @@
                 <li><strong>Latency (µs):</strong> Represents the time taken for a single I/O operation, measured in microseconds.</li>
                 <li><strong>Bandwidth (MiB/s):</strong> The amount of data transferred per second, measured in megabytes per second (MiB/s).</li>
             </ul>
-    
+
             <p class="conclusion-text">From the results, it is evident that SPDK provides a significant advantage over libaio and io_uring in terms of IOPS and bandwidth, especially in random read/write tests.</p>
         </div>
     </section>    
@@ -255,7 +254,7 @@
                 <li><strong>Throughput:</strong> SPDK achieves the highest throughput, with significant gains over libaio and io_uring, especially in high-concurrency tests.</li>
                 <li><strong>IOPS:</strong> SPDK also leads in terms of IOPS, with io_uring providing a good middle ground and libaio being the least efficient in this regard.</li>
             </ul>
-    
+
             <h3 class="section-title">Final Thoughts:</h3>
             <p>Choosing the right I/O engine depends on the specific requirements of your environment. SPDK is the clear leader in performance, but it comes at the cost of complexity. io_uring offers an excellent middle ground for modern applications, and libaio remains a solid choice for simpler setups or legacy systems. By understanding the strengths and weaknesses of each engine, you can make an informed decision on which one to use in your specific use case.</p>
         </div>
