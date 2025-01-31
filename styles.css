@@ -183,3 +183,44 @@ a:hover {
         width: 90%;
     }
 }
+
+.team {
+    background-color: #fff;
+    padding: 40px 0;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.team-member {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.team-member p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.team-member a {
+    color: #4e54c8;
+    text-decoration: none;
+}
+
+.team-member a:hover {
+    text-decoration: underline;
+}
