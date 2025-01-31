@@ -268,3 +268,31 @@ a:hover {
         font-size: 14px;
     }
 }
+
+.conclusion {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.conclusion h2, .conclusion h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.conclusion p, .conclusion ul {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.conclusion ul {
+    padding-left: 20px;
+}
+
+.conclusion li {
+    margin-bottom: 10px;
+}
