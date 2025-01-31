@@ -118,19 +118,43 @@ footer {
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer p {
-    font-size: 14px;
+footer {
+    background-color: #2d3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
 }
 
-button {
-    padding: 10px 20px;
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
     font-size: 1rem;
-    background-color: #4e54c8;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+footer strong {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    footer p {
+        font-size: 0.9rem;
+    }
 }
 
 button:hover {
@@ -153,10 +177,6 @@ a:hover {
 
     header p {
         font-size: 1.2rem;
-    }
-
-    footer {
-        padding: 15px;
     }
 
     .container {
