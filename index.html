@@ -25,14 +25,14 @@
             <p>This project compares the performance of three different I/O engines in handling random read, random write, and mixed read-write operations. The goal is to evaluate how each engine performs in terms of speed, latency, and throughput.</p>
             
             <p>We tested three I/O engines:</p>
-            <ul>
+            <ul style="list-style-type: disc; margin-left: 20px;">
                 <li><strong>libaio:</strong> A traditional Linux asynchronous I/O library known for handling high-performance tasks.</li>
                 <li><strong>io_uring:</strong> A newer Linux I/O interface that provides faster and more efficient asynchronous I/O by reducing kernel overhead.</li>
                 <li><strong>SPDK (Storage Performance Development Kit):</strong> A user-space engine designed for extremely low-latency and high-throughput I/O, mostly used with NVMe SSDs.</li>
             </ul>
     
             <p>We tested these engines under different conditions, including with 1 and 4 threads for each engine. The tests measured:</p>
-            <ul>
+            <ul style="list-style-type: disc; margin-left: 20px;">
                 <li><strong>IOPS (Input/Output Operations Per Second):</strong> Measures how quickly read and write operations are performed.</li>
                 <li><strong>Latency (µs):</strong> Measures the time it takes for an I/O request to complete.</li>
                 <li><strong>Bandwidth (MiB/s):</strong> Measures the amount of data transferred in megabytes per second during read/write operations.</li>
@@ -40,7 +40,7 @@
     
             <h3>How the Benchmarking Was Done</h3>
             <p>Here are the hardware and test environment details:</p>
-            <ul>
+            <ul style="list-style-type: disc; margin-left: 20px;">
                 <li><strong>CPU:</strong> 8-core Intel Xeon processor</li>
                 <li><strong>RAM:</strong> 32 GB</li>
                 <li><strong>Storage:</strong> NVMe SSD (Samsung 970 Pro)</li>
@@ -54,21 +54,21 @@
     
             <h4>libaio</h4>
             <p>libaio is an older Linux I/O library that performs asynchronous operations. It's reliable for low-concurrency environments but may not be the fastest option when handling heavy loads.</p>
-            <ul>
+            <ul style="list-style-type: circle; margin-left: 40px;">
                 <li><strong>Best for:</strong> Simple setups with low concurrency.</li>
                 <li><strong>Limitations:</strong> Higher latency and lower throughput when compared to newer engines like io_uring and SPDK.</li>
             </ul>
     
             <h4>io_uring</h4>
             <p>io_uring is a more recent I/O interface that reduces kernel overhead and offers better performance, especially in high-concurrency tasks. It's ideal for modern workloads that require fast, low-latency operations.</p>
-            <ul>
+            <ul style="list-style-type: circle; margin-left: 40px;">
                 <li><strong>Best for:</strong> Applications with high I/O demands like databases or workloads requiring low latency.</li>
                 <li><strong>Limitations:</strong> Requires Linux kernel version 5.1 or later and may not work as well on older hardware.</li>
             </ul>
     
             <h4>SPDK</h4>
             <p>SPDK is a high-performance, user-space I/O framework designed for NVMe storage systems. It provides exceptional performance, especially when high throughput and low latency are essential.</p>
-            <ul>
+            <ul style="list-style-type: circle; margin-left: 40px;">
                 <li><strong>Best for:</strong> High-performance computing, storage servers, and environments with NVMe SSDs.</li>
                 <li><strong>Limitations:</strong> It requires more complex setup and is resource-intensive compared to libaio and io_uring.</li>
             </ul>
@@ -76,7 +76,7 @@
             <h3>Conclusion</h3>
             <p>Based on the benchmarking results, SPDK outperformed both libaio and io_uring in terms of throughput and IOPS, especially when using 4 threads. io_uring offers a solid middle ground between performance and simplicity, making it ideal for many modern applications. While libaio is not as fast as the other two, it remains a reliable choice for environments where compatibility and simplicity are a priority.</p>
         </div>
-    </section>
+    </section>    
     
     <section class="comparison">
         <div class="container">
