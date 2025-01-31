@@ -110,21 +110,11 @@ table th {
 }
 
 footer {
-    background-color: #2d3e50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
-    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #2d3e50;
+    background: linear-gradient(135deg, #2d3e50, #4e54c8);
     color: white;
     padding: 30px 0;
     text-align: center;
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
 }
 
 footer .container {
@@ -211,7 +201,18 @@ a:hover {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
 }
 
 .team-member h3 {
@@ -428,4 +429,22 @@ a:hover {
     .container {
         width: 90%;
     }
+}
+
+a, button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover, button:hover {
+    background-color: #3a3f8c;
+    color: #fff;
+}
+
+.insight-list li, .metrics-list li {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.insight-list li:hover, .metrics-list li:hover {
+    transform: translateX(5px);
+    background-color: #e8e8ff;
 }
