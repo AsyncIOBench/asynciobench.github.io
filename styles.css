@@ -202,6 +202,7 @@ a:hover {
 .team-member {
     margin-bottom: 30px;
     text-align: center;
+    flex: 1;
 }
 
 .team-member img {
@@ -232,4 +233,38 @@ a:hover {
 
 .team-member a:hover {
     text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        margin-bottom: 20px;
+    }
+
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .team-member h3 {
+        font-size: 20px;
+    }
+
+    .team-member p {
+        font-size: 14px;
+    }
 }
