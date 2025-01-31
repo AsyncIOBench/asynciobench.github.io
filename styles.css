@@ -58,8 +58,8 @@ header p{
 .intro h2 {
     font-size: 32px;
     text-align: center;
-    font-weight: bold;
     margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .comparison h2 {
@@ -71,16 +71,16 @@ header p{
 
 .intro p {
     font-size: 18px;
-    line-height: 1.8;
-    color: #555;
     text-align: center;
     margin-bottom: 20px;
+    color: #555;
 }
 
 .intro ul {
     list-style-type: disc;
     margin-left: 40px;
     text-align: left;
+    padding-left: 20px;
 }
 
 .intro li {
@@ -431,16 +431,8 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 28px;
-    }
-
-    .intro-text, .conclusion-text {
+    .conclusion-text {
         font-size: 16px;
-    }
-
-    .container {
-        width: 90%;
     }
 }
 
@@ -460,4 +452,18 @@ a:hover, button:hover {
 .insight-list li:hover, .metrics-list li:hover {
     transform: translateX(5px);
     background-color: #e8e8ff;
+}
+
+@media (max-width: 768px) {
+    .intro p {
+        font-size: 16px;
+    }
+
+    .intro ul {
+        margin-left: 20px;
+    }
+
+    .intro li {
+        font-size: 16px;
+    }
 }
