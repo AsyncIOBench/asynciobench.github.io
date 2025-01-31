@@ -200,8 +200,17 @@ a:hover {
 }
 
 .team-member {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .team-member h3 {
