@@ -37,6 +37,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Data from libaio -->
                     <tr>
                         <td>libaio</td>
                         <td>Rand Read (1 thread)</td>
@@ -52,6 +53,22 @@
                         <td>7.3</td>
                     </tr>
                     <tr>
+                        <td>libaio</td>
+                        <td>Rand Read (4 threads)</td>
+                        <td>6938</td>
+                        <td>40.05</td>
+                        <td>27.1</td>
+                    </tr>
+                    <tr>
+                        <td>libaio</td>
+                        <td>Rand Write (4 threads)</td>
+                        <td>7730</td>
+                        <td>41.16</td>
+                        <td>30.2</td>
+                    </tr>
+
+                    <!-- Data from io_uring -->
+                    <tr>
                         <td>io_uring</td>
                         <td>Rand Read (1 thread)</td>
                         <td>1016</td>
@@ -66,6 +83,22 @@
                         <td>7.5</td>
                     </tr>
                     <tr>
+                        <td>io_uring</td>
+                        <td>Rand Read (4 threads)</td>
+                        <td>9058</td>
+                        <td>563.12</td>
+                        <td>35.4</td>
+                    </tr>
+                    <tr>
+                        <td>io_uring</td>
+                        <td>Rand Write (4 threads)</td>
+                        <td>9081</td>
+                        <td>514.82</td>
+                        <td>35.5</td>
+                    </tr>
+
+                    <!-- Data from SPDK -->
+                    <tr>
                         <td>SPDK</td>
                         <td>Rand Read (1 thread)</td>
                         <td>258000</td>
@@ -78,6 +111,20 @@
                         <td>517000</td>
                         <td>1.61</td>
                         <td>2018</td>
+                    </tr>
+                    <tr>
+                        <td>SPDK</td>
+                        <td>Rand Read (4 threads)</td>
+                        <td>1065000</td>
+                        <td>1.54</td>
+                        <td>4160</td>
+                    </tr>
+                    <tr>
+                        <td>SPDK</td>
+                        <td>Rand Write (4 threads)</td>
+                        <td>1494700</td>
+                        <td>1.71</td>
+                        <td>5838</td>
                     </tr>
                 </tbody>
             </table>
