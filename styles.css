@@ -15,6 +15,7 @@ header {
     color: white;
     padding: 50px 0;
     text-align: center;
+    border-bottom: 4px solid #ccc;
 }
 
 header h1 {
@@ -32,7 +33,7 @@ header p {
     margin: 0 auto;
 }
 
-.intro {
+.intro, .details {
     background-color: #ffffff;
     padding: 30px;
     margin-top: 30px;
@@ -40,14 +41,32 @@ header p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.intro h2 {
+.intro h2, .details h2 {
     font-size: 28px;
     margin-bottom: 15px;
 }
 
-.intro p {
+.intro p, .details p, .details ul {
     font-size: 16px;
     line-height: 1.6;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
 .images {
@@ -64,30 +83,6 @@ header p {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.details {
-    background-color: #ffffff;
-    padding: 30px;
-    margin-top: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.details h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.details ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.details ul li {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
 }
 
 footer {

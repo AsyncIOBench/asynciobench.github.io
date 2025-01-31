@@ -18,34 +18,98 @@
     <section class="intro">
         <div class="container">
             <h2>Project Overview</h2>
-            <p>This project aims to provide an in-depth comparison of three popular I/O engines—libaio, io_uring, and SPDK. It benchmarks random read/write operations, IOPS, bandwidth, and latency to measure storage performance.</p>
+            <p>This project compares the performance of three I/O engines—libaio, io_uring, and SPDK. These engines are compared based on three key metrics: IOPS (Input/Output Operations Per Second), Latency (in microseconds), and Bandwidth (in MiB/s).</p>
+            <p>The benchmark focuses on random read and write operations, as well as the number of threads, to analyze performance under various workloads.</p>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <div class="container">
+            <h2>Benchmark Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Engine</th>
+                        <th>Test Type</th>
+                        <th>IOPS</th>
+                        <th>Latency (µs)</th>
+                        <th>Bandwidth (MiB/s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>libaio</td>
+                        <td>Rand Read (1 thread)</td>
+                        <td>2583</td>
+                        <td>378.95</td>
+                        <td>10.1</td>
+                    </tr>
+                    <tr>
+                        <td>libaio</td>
+                        <td>Rand Write (1 thread)</td>
+                        <td>1839</td>
+                        <td>523.40</td>
+                        <td>7.3</td>
+                    </tr>
+                    <tr>
+                        <td>io_uring</td>
+                        <td>Rand Read (1 thread)</td>
+                        <td>1016</td>
+                        <td>970.34</td>
+                        <td>4.1</td>
+                    </tr>
+                    <tr>
+                        <td>io_uring</td>
+                        <td>Rand Write (1 thread)</td>
+                        <td>1866</td>
+                        <td>521.96</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>SPDK</td>
+                        <td>Rand Read (1 thread)</td>
+                        <td>258000</td>
+                        <td>1.64</td>
+                        <td>1007</td>
+                    </tr>
+                    <tr>
+                        <td>SPDK</td>
+                        <td>Rand Write (1 thread)</td>
+                        <td>517000</td>
+                        <td>1.61</td>
+                        <td>2018</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
     <section class="images">
         <div class="container">
-            <h2>Benchmark Results</h2>
+            <h2>Benchmark Results Visualization</h2>
             <div class="image-container">
-                <img src="Figure1.png" alt="Benchmark Results" class="benchmark-image">
+                <img src="Overview.png" alt="Benchmark Results" class="benchmark-image">
             </div>
         </div>
     </section>
 
     <section class="details">
         <div class="container">
-            <h2>Key Metrics</h2>
-            <p>These are the performance metrics you will see in the benchmark results:</p>
+            <h2>Key Performance Metrics</h2>
+            <p>The benchmark results highlight the performance characteristics of each I/O engine:</p>
             <ul>
-                <li><strong>IOPS:</strong> The number of I/O operations per second, indicating throughput.</li>
-                <li><strong>Latency:</strong> The time delay in microseconds for each operation.</li>
-                <li><strong>Bandwidth:</strong> The amount of data transferred per second, measured in MiB/s.</li>
+                <li><strong>IOPS (Input/Output Operations Per Second):</strong> Indicates the throughput or efficiency of I/O operations per second.</li>
+                <li><strong>Latency (µs):</strong> Represents the time taken for a single I/O operation, measured in microseconds.</li>
+                <li><strong>Bandwidth (MiB/s):</strong> The amount of data transferred per second, measured in megabytes per second (MiB/s).</li>
             </ul>
+
+            <p>From the results, it is evident that SPDK provides a significant advantage over libaio and io_uring in terms of IOPS and bandwidth, especially in random read/write tests.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 High-Performance I/O Benchmark | Developed by Iman Mohammadi</p>
+            <p>&copy; 2025 High-Performance I/O Benchmark | Developed by Your Name</p>
         </div>
     </footer>
 </body>
